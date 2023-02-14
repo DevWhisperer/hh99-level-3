@@ -17,6 +17,12 @@ const ModalBackground = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+
+  z-index: ${({ modalNum }) => {
+    if (!modalNum) {
+      return -1;
+    }
+  }};
 `;
 
 export default ModalBackground;
